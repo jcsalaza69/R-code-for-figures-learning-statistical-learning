@@ -1,12 +1,11 @@
 library(ISLR)
 library(MASS)
 library(ggplot2)
-# library(dummies)
-Credit<-read.csv(file="K:/INTRODUCCIÓN A LA ANALÍTICA/02-2019/Credit.csv",
-                 header=T,sep=',',dec='.')
-Balance=Credit[,13]
-Income=Credit[,3]
-Student=Credit[,10]
+Credit=ISLR::Credit
+head(Credit)
+Balance=Credit[,12]
+Income=Credit[,2]
+Student=Credit[,9]
 fitted1=lm(Balance~Income+Student)$fitted.values
 fitted2=lm(Balance~Income+Student+Income*Student)
 newdata1=data.frame(fitted1,Income,Student)
@@ -37,3 +36,4 @@ Model2<-ggplot(newdata2, aes(x=Income, y=fitted2))+
   geom_line(aes(group = Student, color = Student), size = 1) 
 
 plot_grid(Model1, Model2, labels = "AUTO")
+
