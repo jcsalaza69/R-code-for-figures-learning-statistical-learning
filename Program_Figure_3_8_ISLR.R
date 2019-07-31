@@ -1,8 +1,6 @@
 library(ISLR)
 library(MASS)
 library(ggplot2)
-#Auto<-read.csv(file="K:/INTRODUCCIÓN A LA ANALÍTICA/02-2019/Credit.csv",
-#                 header=T,sep=',',dec='.')
 Auto=ISLR::Auto
 mpg<-Auto$mpg
 horsepower<-Auto$horsepower
