@@ -5,7 +5,6 @@ library(ISLR)
 library(ggplot2)
 library(MASS)
 library("plot3D")
-#Advertising<-read.csv(file="K:/INTRODUCCIÓN A LA ANALÍTICA/02-2019/Advertising.csv",header=T,sep=',',dec='.')
 Advertising<-read.csv(file="Advertising.csv",header=T,sep=',',dec='.')
 z=Advertising$sales
 y=Advertising$TV
