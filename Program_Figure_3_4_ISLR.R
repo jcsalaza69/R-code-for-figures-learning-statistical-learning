@@ -6,7 +6,6 @@ library(ggplot2)
 library(MASS)
 library("plot3D")
 
-#Income3D=read.csv(file="F:/INTRODUCCIÓN A LA ANALÍTICA/02-2019/Income2.csv",header=T,sep=',',dec='.')
 Income3D=read.csv(file="Income2.csv",header=T,sep=',',dec='.')
 head(Income3D)
 x=Income3D$Education
